@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+@import "../../styles/stylesUtils.module.scss";
+
+$bg-color-header-elements: #0e075928;
+
+@mixin bg-tranparent-hover($bg, $transation-duration) {
+  &:hover {
+    cursor: pointer;
+    background-color: $bg;
+    transition: linear $transation-duration;
+  }
+}
+
+.header_container {
+  @extend .flex-container-inRow;
+  background: transparent;
+  justify-content: space-between;
+  padding: 0 3vw;
+  height: 8vh;
+  z-index: 5;
+
+  & .header_menu_wrapper {
+    @extend .flex-container-inRow;
+    width: 40%;
+    height: 100%;
+    justify-content: space-between;
+
+    & nav {
+      @extend .flex-container-inRow;
+      height: 100%;
+      width: 50%;
+
+      & li {
+        @extend nav;
+        @include bg-tranparent-hover($bg-color-header-elements, 500ms);
+        justify-content: center;
+        width: 33.3%;
+        padding: 1%;
+
+        user-select: none;
+        font-weight: $font-weight-negrito;
+      }
+    }
+
+    &.header_menu_icon_wrapper:hover {
+      filter: blur(2px);
+    }
+
+    & .header_menu_icon_wrapper {
+      @include bg-tranparent-hover($bg-color-header-elements, 500ms);
+    }
+  }
+}
