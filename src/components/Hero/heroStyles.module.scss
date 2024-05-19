@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+@import "../../styles/stylesUtils.module.scss";
+
+.container {
+  @include flex-container(column, center, center);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+
+  & .content_wrapper {
+    @include flex-container(column, center, center);
+    z-index: 10;
+  }
+}

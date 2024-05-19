@@ -5,3 +5,10 @@
   flex-direction: row;
   align-items: center;
 }
+
+@mixin flex-container($direction, $alignHor, $justfyContent) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignHor;
+  justify-content: $justfyContent;
+}

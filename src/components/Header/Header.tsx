@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./headerStyles.module.scss";
 import Image from "next/image";
+import { Archivo } from "next/font/google";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: "500",
+});
 
 export const Header = () => {
   const windowWidth = 1366;
@@ -13,7 +19,7 @@ export const Header = () => {
         </a>
       </div>
       <div className={styles.header_menu_wrapper}>
-        <nav>
+        <nav className={archivo.className}>
           <li>Home</li>
           <li>Sobre</li>
           <li>Contato</li>
