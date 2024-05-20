@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./headerStyles.module.scss";
 import Image from "next/image";
 import { Archivo } from "next/font/google";
+import { CharmMenuHamburger } from "./iconMenuHeader";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -25,6 +26,8 @@ export const Header = () => {
           <li>Contato</li>
         </nav>
         <div>
+          <CharmMenuHamburger width="2.5rem" height="2.5rem" />
+          {/*
           <Image
             src="/icons/charm--menu-hamburger.svg"
             alt="Menu"
@@ -32,6 +35,7 @@ export const Header = () => {
             height={windowHeight * 0.05} //pega 5% da altura da tela
             className={styles.header_menu_icon}
           />
+           */}
         </div>
       </div>
     </header>

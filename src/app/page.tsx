@@ -8,6 +8,8 @@ export default function Home() {
     <main className={styles.pageBody}>
       <Header />
       <Hero />
+
+      {/*<div className={styles.teste}></div> */}
     </main>
   );
 }

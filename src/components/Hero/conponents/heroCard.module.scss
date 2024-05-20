@@ -1,0 +1,58 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/stylesUtils.module.scss";
+
+.container {
+  @include flex-container(row, center, space-between);
+  background: $bg-color-tranparent-dark-gray;
+  min-width: 80%;
+  max-height: 32vh;
+  padding: 1%;
+  margin-bottom: 10vh;
+  border-radius: $border-radius-default;
+
+  & .card_details_info {
+    @include flex-container(column, center, center);
+    gap: 5%;
+
+    background: #cacacab8;
+    width: 70%;
+    height: 98%;
+    border-radius: $border-radius-default;
+
+    & .weather_info_container {
+      @include flex-container(row, center, space-between);
+      background: #f1f1f1;
+      width: 98%;
+      height: 20%;
+      padding: 2%;
+      border-radius: 5px;
+
+      font-weight: bold;
+      font-size: 0.8rem;
+
+      & .wrapperInfos {
+        @include flex-container(row, center, flex-end);
+        width: 40%;
+        height: 100%;
+
+        & .weather_data_container {
+          @include flex-container(row, center, space-between);
+          gap: 5%;
+
+          padding: 0 2%;
+          width: 75%;
+          min-height: 100%;
+        }
+      }
+    }
+  }
+}
+
+#humidity_data > div {
+  @include flex-container(row, center, center);
+}
+
+#sunInfos {
+  @extend .wrapperInfos;
+  gap: 5%;
+}

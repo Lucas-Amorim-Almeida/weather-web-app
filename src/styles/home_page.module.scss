@@ -1,5 +1,13 @@
 @import "./variables.scss";
 .pageBody {
-  background: $color-page-background;
+  background: $bg-color-page;
   min-height: 100vh;
+  & .teste {
+    position: absolute;
+    top: 90vh;
+    left: 0;
+    min-height: 500px;
+    min-width: 100px;
+    background-color: yellow;
+  }
 }
